@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0f;
+  --muted: #64748b;
+  --border: #e4e7eb;
+  --surface: #f7f7f9;
+  --ink: #06283d;
+
+  --brand-violet: #0ea5e9;
+  --brand-blue: #38bdf8;
+  --brand-cyan: #7dd3fc;
+  --brand-pink: #bae6fd;
+  --brand-orange: #0284c7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-brand-violet: var(--brand-violet);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-cyan: var(--brand-cyan);
+  --color-brand-pink: var(--brand-pink);
+  --color-brand-orange: var(--brand-orange);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--brand-violet);
+  color: #fff;
+}
+
+/* Reusable gradient text + surfaces */
+.text-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--brand-violet) 0%,
+    var(--brand-blue) 45%,
+    var(--brand-cyan) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradient-btn {
+  background: linear-gradient(100deg, var(--brand-violet), var(--brand-blue));
+}
+
+.grid-fade {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 60% 60% at 50% 0%, black 40%, transparent 100%);
+}
+
+/* Ambient gradient orbs — GPU-accelerated transform/opacity only */
+@keyframes float-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(4%, 6%) scale(1.08); }
+}
+@keyframes float-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-6%, 4%) scale(1.12); }
+}
+@keyframes float-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(3%, -5%) scale(1.06); }
+}
+.animate-float-a { animation: float-a 16s ease-in-out infinite; }
+.animate-float-b { animation: float-b 20s ease-in-out infinite; }
+.animate-float-c { animation: float-c 18s ease-in-out infinite; }
+
+/* Infinite marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-float-a,
+  .animate-float-b,
+  .animate-float-c,
+  .animate-marquee {
+    animation: none !important;
+  }
+}
