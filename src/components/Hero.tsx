@@ -40,7 +40,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.15, ease: easeOut }}
           className="mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl"
         >
-          LightHouseX designs and builds beautiful, lightning-fast websites for
+          XLightHouse designs and builds beautiful, lightning-fast websites for
           growing businesses — online stores, portfolios, and everything in between.
         </motion.p>
 

@@ -34,7 +34,7 @@ export function Navbar() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link href="#top" className="flex items-center gap-2 text-lg font-semibold tracking-tight">
           <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-blue" />
-          LightHouseX
+          XLightHouse
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">

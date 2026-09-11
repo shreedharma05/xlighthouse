@@ -28,7 +28,7 @@ export function Footer() {
           <div className="col-span-2 sm:col-span-2">
             <Link href="#top" className="flex items-center gap-2 text-lg font-semibold tracking-tight">
               <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-blue" />
-              LightHouseX
+              XLightHouse
             </Link>
             <p className="mt-4 max-w-xs text-sm text-muted">
               A web development studio building fast, beautifully designed
@@ -67,9 +67,9 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-sm text-muted sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} LightHouseX. All rights reserved.</p>
-          <Link href="mailto:hello@lighthousex.dev" className="hover:text-foreground">
-            hello@lighthousex.dev
+          <p>&copy; {new Date().getFullYear()} XLightHouse. All rights reserved.</p>
+          <Link href="mailto:hello@xlighthouse.dev" className="hover:text-foreground">
+            hello@xlighthouse.dev
           </Link>
         </div>
       </div>

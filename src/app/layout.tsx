@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LightHouseX — Websites Engineered for Ambitious Businesses",
+  title: "XLightHouse — Websites Engineered for Ambitious Businesses",
   description:
-    "LightHouseX is a web development studio building high-performance ecommerce stores, portfolios, and web apps — designed to convert and engineered for speed.",
+    "XLightHouse is a web development studio building high-performance ecommerce stores, portfolios, and web apps — designed to convert and engineered for speed.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

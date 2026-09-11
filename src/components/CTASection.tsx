@@ -18,7 +18,7 @@ export function CTASection() {
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="mailto:hello@lighthousex.dev"
+              href="mailto:hello@xlighthouse.dev"
               className="group flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-ink transition-transform hover:scale-[1.03] active:scale-[0.98]"
             >
               Get in touch
